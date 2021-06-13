@@ -1,0 +1,24 @@
+'''
+You are given a set A and n other sets.
+Your job is to find whether set A is a strict superset of each of the N sets.
+Print True, if A is a strict superset of each of the N sets. Otherwise, print False.
+A strict superset has at least one element that does not exist in its subset.
+'''
+if __name__ == '__main__':
+    A = set(input().split())
+    strict_superset = True
+    for _ in range(int(input())):
+        strict_superset = A > set(input().split())
+        if not strict_superset:
+            break
+    print(strict_superset)
+'''
+Input and Output
+
+1 2 3 4 5 6 7 8 9 10 11 12 23 45 84 78
+2
+1 2 3 4 5
+100 11 12
+
+False
+'''
